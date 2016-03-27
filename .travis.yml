@@ -1,0 +1,24 @@
+git:
+    submodules: false
+
+# whitelist
+branches:
+  only:
+    - dev
+    - master
+
+before_install:
+    - echo "before_install"
+    - df -h
+    - date
+    - pwd
+    - uname -a
+
+    # Xvfb stuff for clipboard functionality; see the travis-ci documentation
+    - export DISPLAY=:99.0
+    - sh -e /etc/init.d/xvfb start
+
+    - sudo apt-get update -qq
+
+script:
+    - bash ./get_podcasts.sh 1
