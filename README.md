@@ -6,4 +6,4 @@
 [![GitHub stars](https://img.shields.io/github/stars/icaoberg/la_venganza_sera_terrible.svg)](https://github.com/icaoberg/la_venganza_sera_terrible/stargazers)
 [![GitHub license](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://raw.githubusercontent.com/icaoberg/la_venganza_sera_terrible/master/LICENSE)
 
-Helper script that downloads the podcasts from venganzasdelpasado.com.ar
+Helper script that downloads the podcasts from [venganzasdelpasado.com.ar](https://venganzasdelpasado.com.ar/)
