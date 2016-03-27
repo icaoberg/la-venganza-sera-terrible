@@ -27,7 +27,7 @@ The first two are available in most \*nix like system, such as Ubuntu and MacOSX
 You can use this script in two ways
 
 ## No input arguments
-Without any input arguments, the script will try to download the podcasts from the last 5 pages on the site.
+Without any input arguments, the script will crawl and try to download the podcasts from the last 5 pages on the site.
 
 ```
 bash ./get_podcasts.sh
@@ -69,37 +69,20 @@ lavenganza_2016-03-24.m 100%[=================================>]  20.62M  5.85MB
 
 2016-03-27 15:35:29 (5.86 MB/s) - 'lavenganza_2016-03-24.mp3' saved [21617965/21617965]
 
---2016-03-27 15:35:29--  http://venganzasdelpasado.com.ar/2016/lavenganza_2016-03-23.mp3
-Reusing existing connection to venganzasdelpasado.com.ar:80.
-HTTP request sent, awaiting response... 200 OK
-Length: 21617965 (21M) [audio/mpeg]
-Saving to: 'lavenganza_2016-03-23.mp3'
-
-lavenganza_2016-03-23.m 100%[=================================>]  20.62M  5.91MB/s   in 3.5s
-
-2016-03-27 15:35:33 (5.85 MB/s) - 'lavenganza_2016-03-23.mp3' saved [21617965/21617965]
-
---2016-03-27 15:35:33--  http://venganzasdelpasado.com.ar/2016/lavenganza_2016-03-22.mp3
-Reusing existing connection to venganzasdelpasado.com.ar:80.
-HTTP request sent, awaiting response... 200 OK
-Length: 21739789 (21M) [audio/mpeg]
-Saving to: 'lavenganza_2016-03-22.mp3'
-
-lavenganza_2016-03-22.m 100%[=================================>]  20.73M  5.88MB/s   in 3.5s
-
-2016-03-27 15:35:36 (5.91 MB/s) - 'lavenganza_2016-03-22.mp3' saved [21739789/21739789]
-
---2016-03-27 15:35:36--  http://venganzasdelpasado.com.ar/2016/lavenganza_2016-03-21.mp3
-Reusing existing connection to venganzasdelpasado.com.ar:80.
-HTTP request sent, awaiting response... 200 OK
-Length: 21617965 (21M) [audio/mpeg]
-Saving to: 'lavenganza_2016-03-21.mp3'
-
-lavenganza_2016-03-21.m 100%[=================================>]  20.62M  5.92MB/s   in 3.5s
-
-2016-03-27 15:35:40 (5.89 MB/s) - 'lavenganza_2016-03-21.mp3' saved [21617965/21617965]
-
 FINISHED --2016-03-27 15:35:40--
 Total wall clock time: 18s
-Downloaded: 5 files, 103M in 18s (5.70 MB/s)
+Downloaded: 2 files, 42M in 10s (5.70 MB/s)
 ```
+
+### Daily Downloads
+You can add the script to your crontab so that it can run daily and download the podcasts daily. Assume that the script resides in the folder `/path/to/podcasts/`, then you can add the following lines to your crontab
+
+```
+@daily /bin/bash /path/to/podcasts/get_podcasts.sh 10
+```
+
+## Bugs and Questions
+
+To submit bugs about the source code visit
+
+https://github.com/icaoberg/la_venganza_sera_terrible/
