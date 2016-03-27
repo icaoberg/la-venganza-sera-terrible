@@ -21,7 +21,7 @@ The script depends on
 * `grep`
 * `wget`
 
-The first two are available in most \*nix like system, such as Ubuntu and MacOSX. MacOSX comes with `curl` rather than `wget` but it can be easily installed (or hack this script to use curl instead).
+The first two are available in most \*nix like system, such as Ubuntu and MacOSX. MacOSX comes with `curl` rather than `wget` but it can be easily installed using [Homebrew](http://brew.sh/).
 
 ## Usage
 You can use this script in two ways
