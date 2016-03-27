@@ -7,9 +7,9 @@ else
 fi
 echo "Setting maximum number of pages to "$MAX_NUMBER_OF_PAGES
 
-for ((I=0; I<=MAX_NUMBER_OF_PAGES; I++))
+for ((I=1; I<=MAX_NUMBER_OF_PAGES; I++))
 do
-	wget -nc --quiet --output-document=temp.html http://venganzasdelpasado.com.ar/posts/page/$I
+	wget -nc --quiet --no-check-certificate --output-document=temp.html http://venganzasdelpasado.com.ar/posts/page/$I
 	echo "Attempting to download podcasts from page number "$I
 	grep "mp3" *.html | grep "http://venganzasdelpasado.com.ar" | grep "audio/mpeg" | cut -d"'" -f 2 | xargs wget -nc
 	rm -f *.html
