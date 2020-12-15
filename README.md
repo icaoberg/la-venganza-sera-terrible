@@ -81,6 +81,13 @@ You can add the script to your crontab so that it can run daily and download the
 @daily /bin/bash /path/to/podcasts/get_podcasts.sh 10
 ```
 
+### File annotation
+```
+DIRECTORY=/path/to/files
+
+./annotate_files.sh $DIRECTORY
+```
+
 ## Bugs and Questions
 
 To submit bugs about the source code visit
