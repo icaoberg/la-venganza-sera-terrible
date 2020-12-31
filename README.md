@@ -92,4 +92,4 @@ DIRECTORY=/path/to/files
 
 To submit bugs about the source code visit
 
-https://github.com/icaoberg/la_venganza_sera_terrible/
+https://github.com/icaoberg/la-venganza-sera-terrible/
