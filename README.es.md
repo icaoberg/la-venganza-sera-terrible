@@ -1,4 +1,4 @@
-# La Venganza sera Terrible
+# La Venganza será Terrible
 
 ![Podcasting](https://img.shields.io/badge/podcasting-awesome-blue.svg)
 [![Hacky](https://img.shields.io/badge/hacky-true-blue.svg)](https://en.wiktionary.org/wiki/hacky)
@@ -11,8 +11,8 @@
 
 Simple programa que baja los podcasts de [venganzasdelpasado.com.ar](https://venganzasdelpasado.com.ar/).
 
-## Acerca de este proyect
-Este es un programa escrito en `bash` que usa `grep` para extraer los URLs en las paginas de Venganza del Pasado y despues usa `wget` para bajar los archivos localmente.
+## Acerca de este proyectp
+Este es un programa escrito en `bash` que usa `grep` para extraer los URLs en las páginas de Venganza del Pasado y después usa `wget` para bajar los archivos localmente.
 
 ## Dependencias
 Este programa depende
@@ -23,14 +23,14 @@ Este programa depende
 
 ## Como usar el programa
 ## Sin argumentos
-Sin argumentos, el programa tratara de bajar los archivos en las ultimas 5 paginas.
+Sin argumentos, el programa tratara de bajar los archivos en las últimas 5 páginas.
 
 ```
 bash ./get_podcasts.sh
 ```
 
 ## Numero de paginas
-El unico argumento de entrada es el numero de paginas a revisar. Para revisar las ultimas 100 paginas y bajar archivos, se puede usar de esta manera
+El único argumento de entrada es el número de páginas a revisar. Para revisar las últimas 100 paginas y bajar archivos, se puede usar de esta manera
 
 ```
 bash ./get_podcasts.sh 100
@@ -68,13 +68,13 @@ Downloaded: 2 files, 42M in 10s (5.70 MB/s)
 ```
 
 ### Crontab
-Puedes a\~nadir el programa al crontab y bajar los archivos todos los d\'ias.
+Puedes añadir el programa al crontab y bajar los archivos todos los días.
 
 ```
 @daily /bin/bash /path/to/podcasts/get_podcasts.sh 10
 ```
 
-### Anotacion de archivos MP3s
+### Anotación de archivos MP3s
 Esto es alternativo y no es necesario para bajar los archivos
 
 ```
@@ -85,6 +85,6 @@ DIRECTORY=/path/to/files
 
 ## Problemas y preguntas
 
-Si encuentra algun problema con este programa por favor someter un ticket en
+Si encuentra algún problema con este programa por favor someter un ticket en
 
 https://github.com/icaoberg/la-venganza-sera-terrible/
