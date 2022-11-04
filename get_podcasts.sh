@@ -12,6 +12,6 @@ do
 	TMPFILE=/tmp/$(uuidgen)
 	wget -nc --no-check-certificate --output-document=$TMPFILE http://venganzasdelpasado.com.ar/posts/page/$I
 	echo "Attempting to download podcasts from page number "$I
-	cat $TMPFILE | grep mp3 | grep source | cut -d'"' -f2 | xargs ts wget -nc
+	cat $TMPFILE | grep mp3 | grep source | cut -d'"' -f2 | xargs wget -nc
 	if [ -f $TMPFILE ]; then rm -f $TMPFILE; fi
 done
