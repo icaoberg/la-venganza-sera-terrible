@@ -1,4 +1,4 @@
-# La Venganza sera Terrible
+# La Venganza será Terrible
 
 ![Podcasting](https://img.shields.io/badge/podcasting-awesome-blue.svg)
 [![Hacky](https://img.shields.io/badge/hacky-true-blue.svg)](https://en.wiktionary.org/wiki/hacky)
@@ -6,42 +6,37 @@
 [![GitHub forks](https://img.shields.io/github/forks/icaoberg/la_venganza_sera_terrible.svg)](https://github.com/icaoberg/la_venganza_sera_terrible/network)
 [![GitHub stars](https://img.shields.io/github/stars/icaoberg/la_venganza_sera_terrible.svg)](https://github.com/icaoberg/la_venganza_sera_terrible/stargazers)
 [![GitHub license](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://raw.githubusercontent.com/icaoberg/la_venganza_sera_terrible/master/LICENSE)
+[![Build Status](https://travis-ci.org/icaoberg/la_venganza_sera_terrible.svg?branch=dev)](https://travis-ci.org/icaoberg/la_venganza_sera_terrible)
+[![Build Status](https://travis-ci.org/icaoberg/la_venganza_sera_terrible.svg?branch=master)](https://travis-ci.org/icaoberg/la_venganza_sera_terrible)
 
-Super simple and dumb helper script that downloads the podcasts from [venganzasdelpasado.com.ar](https://venganzasdelpasado.com.ar/).
+Simple programa que baja los podcasts de [venganzasdelpasado.com.ar](https://venganzasdelpasado.com.ar/).
 
-## About
-This is a bash script that uses `grep` to search for the URLS in the HTML pages and then uses `wget` to download them to disk.
+## Acerca de este proyectp
+Este es un programa escrito en `bash` que usa `grep` para extraer los URLs en las páginas de Venganza del Pasado y después usa `wget` para bajar los archivos localmente.
 
-## Dependencies
-The script depends on
+## Dependencias
+Este programa depende
 
 * `bash`
 * `grep`
 * `wget`
 
-The first two are available in most \*nix-like OS, such as Ubuntu and MacOSX. MacOSX comes with `curl` rather than `wget` but it can be easily installed using [Homebrew](http://brew.sh/).
-
-## Usage
-You can use this script in two ways
-
-## No input arguments
-Without any input arguments, the script will crawl and try to download the podcasts from the last 5 pages on the site.
+## Como usar el programa
+## Sin argumentos
+Sin argumentos, el programa tratara de bajar los archivos en las últimas 5 páginas.
 
 ```
 bash ./get_podcasts.sh
 ```
 
-## Number of pages to crawl
-The only input argument is the maximum number of images to crawl.
+## Numero de paginas
+El único argumento de entrada es el número de páginas a revisar. Para revisar las últimas 100 paginas y bajar archivos, se puede usar de esta manera
 
 ```
 bash ./get_podcasts.sh 100
 ```
 
-## Examples
-
-### Crawling and downloading from main page
-
+## Ejemplo
 ```
 bash ./get_podcasts.sh 1
 Setting maximum number of pages to 1
@@ -72,22 +67,24 @@ Total wall clock time: 18s
 Downloaded: 2 files, 42M in 10s (5.70 MB/s)
 ```
 
-### Daily Downloads
-You can add the script to your crontab so that it can run daily and download the podcasts daily. Assume that the script resides in the folder `/path/to/podcasts/`, then you can add the following lines to your crontab
+### Crontab
+Puedes añadir el programa al crontab y bajar los archivos todos los días.
 
 ```
 @daily /bin/bash /path/to/podcasts/get_podcasts.sh 10
 ```
 
-### File annotation
+### Anotación de archivos MP3s
+Esto es alternativo y no es necesario para bajar los archivos
+
 ```
 DIRECTORY=/path/to/files
 
 ./annotate_files.sh $DIRECTORY
 ```
 
-## Bugs and Questions
+## Problemas y preguntas
 
-To submit bugs about the source code visit
+Si encuentra algún problema con este programa por favor someter un ticket en
 
 https://github.com/icaoberg/la-venganza-sera-terrible/

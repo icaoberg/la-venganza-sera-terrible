@@ -9,9 +9,8 @@ echo "Setting maximum number of pages to "$MAX_NUMBER_OF_PAGES
 
 for ((I=1; I<=MAX_NUMBER_OF_PAGES; I++))
 do
-	TMPFILE=/tmp/$(uuidgen)
-	wget -nc --no-check-certificate --output-document=$TMPFILE http://venganzasdelpasado.com.ar/posts/page/$I
+	wget -nc --no-check-certificate --output-document=temp.html http://venganzasdelpasado.com.ar/posts/page/$I
 	echo "Attempting to download podcasts from page number "$I
-	cat $TMPFILE | grep mp3 | grep source | cut -d'"' -f2 | xargs ts wget -nc
-	if [ -f $TMPFILE ]; then rm -f $TMPFILE; fi
+	cat temp.html | grep mp3 | grep source | cut -d'"' -f2 | xargs -I {} ts wget -nc {}
+	rm -f *.html
 done
